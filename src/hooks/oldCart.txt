@@ -1,0 +1,47 @@
+/* const addProduct = async (productId: number) => {
+    try {
+      const updatedCart = [...cart]
+      const existingProduct = updatedCart.find(product => product.id === productId)
+
+      if (existingProduct) {
+        const stockAmount = stock.find(product => product.id === productId)
+        if (stockAmount && existingProduct.amount >= stockAmount.amount) {
+          throw new Error(`Não temos mais o produto ${existingProduct.id} no estoque.`)
+        }
+        existingProduct.amount += 1
+      }
+      else {
+        const productToAdd = products.find(product => product.id === productId)
+        if (productToAdd) {
+          updatedCart.push({ ...productToAdd, amount: 1 })
+        } else {
+          throw new Error(`Produto com o id ${productId} não encontrado`)
+        }
+      }
+      setCart(updatedCart)
+    } catch (Error) {
+      console.log(Error)
+    }
+  };
+
+  const removeProduct = (productId: number) => {
+    try {
+      setCart(prevState => prevState.filter(product => product.id !== productId))
+    } catch (Error) {
+      console.log(Error)
+    }
+  };
+
+  const decrementProduct = (productId: number) => {
+    try {
+      const updatedCart = [...cart]
+      const existingProduct = updatedCart.find(product => product.id === productId)
+
+      if (existingProduct) {
+        existingProduct.amount -= 1
+      }
+      setCart(updatedCart)
+    } catch (error) {
+      console.log(error)
+    }
+  } */
